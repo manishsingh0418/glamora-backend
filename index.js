@@ -16,11 +16,14 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(
   cors({
-    origin: "https://glamora-frontend-nu.vercel.app",
+    origin: [
+      "http://localhost:5173", // Vite dev server
+      "http://localhost:3000", // React default
+      "https://glamora-frontend-nu.vercel.app" // deployed frontend
+    ],
     credentials: true,
   })
 );
-
 // image upload
 const uploadImage = require("./src/utils/uploadImage");
 
