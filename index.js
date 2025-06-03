@@ -19,7 +19,7 @@ app.use(
     origin: [
       "http://localhost:5173", // Vite dev server
       "http://localhost:3000", // React default
-      "https://theglamora.netlify.app/" // deployed frontend
+      "https://theglamora.netlify.app" // deployed frontend
     ],
     credentials: true,
   })
